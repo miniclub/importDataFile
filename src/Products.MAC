@@ -1,1 +1,18 @@
-
+ROUTINE Products
+ImportData(filename) public {
+	open filename:("RS"):3
+	if '$test {
+        write "ファイルがオープンできません",!
+		quit
+	}
+	try {
+        kill ^product
+		for {
+			use filename read line use 0
+			set ^product($I(^product))=$listfromstring(line,",")
+		}
+	} catch {
+	}
+	close filename
+	quit
+}
