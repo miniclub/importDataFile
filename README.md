@@ -1,0 +1,2 @@
+# importDataFile
+Interoperablity機能を使用したファイル連携サンプル
