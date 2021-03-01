@@ -9,7 +9,7 @@ ImportData(filename) public {
         kill ^product
 		for {
 			use filename read line use 0
-			set ^product($I(^product))=$listfromstring(line,",")
+			set ^product($I(^product))=$listfromstring(line,",",3)
 		}
 	} catch {
 	}
